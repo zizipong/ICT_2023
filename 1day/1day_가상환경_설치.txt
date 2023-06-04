@@ -1,0 +1,64 @@
+<작업디렉토리 생성>
+> cd /
+> mkdir sejong_202303
+> cd sejong_202303
+> mkdir 1dya
+
+<가상환경 생성하기>
+1. 디렉토리 위치 무관
+ - 아나콘다가 자체적으로 관리를 해줍니다.
+
+2. 가상환경 생성 코드
+ >conda create -n 가상환경이름 python=버전
+ >conda create -n sejong_ml python=3.9
+
+3. 가상환경 목록 확인하기
+ > conda env list
+
+4. 가상환경 삭제하기
+ > conda env remove -n sejong_ml
+
+5. 가상환경으로 들어가기 : 활성화시킨다고 칭함
+ > conda activate sejong_ml
+
+6. 가상환경 빠저나가기 : 비활성화 시키기
+ > conda deactivate
+
+---------[가상환경에서 아래 진행]
+7. 기본 라이브러리 설치하기
+ - 라이브러리 설치 방법 : pip, conda
+ - pip : pip install 라이브러리이름
+  - conda : conda install 라이브러리이름
+   : conda install -c conda-forge 라이브러리이름
+ [파이썬 editor, 커널 설치]
+ >pip install jupyter notebook ipykernel
+
+ >pip install ipython matplotlib pandas scikit-learn xlrd seaborn
+
+ >pip install openpyxl
+
+7.1. 설치 목록 확인하기
+ >conda list
+ >pip list
+
+8. 주피터 노트북 실행하기
+ > jupyter notebook
+
+9. 커널 연결하기
+ >python -m ipykernel install --user --name sejong_ml --display-name sejong_ml_kernel
+
+10. 커널 목록 확인하기
+ >jupyter kernelspec list
+
+11. 커널 삭제하기
+ >jupyter kernelspec uninstall sejong_ml
+
+
+
+
+
+
+
+
+
+
